@@ -70,26 +70,6 @@ Then head to `http://localhost:3001` in your browser.
 The `serve` tasks starts a static file server, which serves the AngularJS application, and a watch task which watches
 all files for changes and lints, builds and injects them into the index.html accordingly.
 
-## Tests
-
-To run tests run:
-
-```bash
-gulp test
-```
-
-**Or** first inject all test files into `karma.conf.js` with:
-
-```bash
-gulp karma-conf
-```
-
-Then you're able to run Karma directly. Example:
-
-```bash
-karma start --single-run
-```
-
 ## Production ready build - a.k.a. dist
 
 To make the app ready for deploy to production run:
@@ -111,15 +91,23 @@ Then head to `http://localhost:3000` in your browser.
 
 # Testing
 
-## Running Unit Tests
+To run tests run:
 
-The backend of the app is currently set up to use Protractor for e2e (End to End) and Mocha for unit testing. And to make it a bit more confusing, we're using Protractor, Karma and Jasmine for the frontend testing (See [`assets/README.md`](assets/README.md). If you're curious to learn more about testing with Mocha in Sails, check out the post [Unit Testing Sails.js Applications With Mocha](http://www.tysoncadenhead.com/blog/unit-testing-sails-js-applications-with-mocha#.VEJS3L5fhhw). You should also see this [Stackoverflow post](http://stackoverflow.com/a/26439686/67524) as well.
+```bash
+gulp test
+```
 
-But as mentioned, the app has already been configured. All you need to do is run:
+**Or** first inject all test files into `karma.conf.js` with:
 
-`grunt test`
+```bash
+gulp karma-conf
+```
 
-*Note: This should run all of the frontend Karma Jasmine unit tests and the Mocha unit tests for the backend. For end to end (e2e) tests, we're using Protractor. You'll need to run this via another command. Read more about e2e tests at [`assets/README.md`](assets/README.md).*
+Then you're able to run Karma directly. Example:
+
+```bash
+karma start --single-run
+```
 
 ---
 
