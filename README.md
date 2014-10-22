@@ -2,7 +2,6 @@
 
 > Spec (http://spec.global) is filling a niche in the [display advertising technology landscape](http://prezi.com/katuvp2rkyk_/the-display-advertising-technology-landscape/) by providing media planning and creative agencies a platform that connects them to site and publisher inventory specifications.
 
-
 ## Used components and development tools
 The Spec backend application uses following 3rd party libraries to make all this magic happen. To see all of the components used, check the `package.json` file in the root directory.
 
@@ -25,6 +24,15 @@ The Spec backend application uses following 3rd party libraries to make all this
 
 Note that this list may change at any time and may not be complete.
 
+
+# Run the app
+
+If you just want to see the app in action run the following:
+
+1. `npm install`
+2. `gulp production`
+3. Navigate to `http://localhost:1337` in your browser.
+4. Start up [spec.global.frontend](https://github.com/robksawyer/spec.global.frontend).
 
 # Getting started
 
