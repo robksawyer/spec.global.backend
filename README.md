@@ -2,7 +2,29 @@
 
 > Spec (http://spec.global) is filling a niche in the [display advertising technology landscape](http://prezi.com/katuvp2rkyk_/the-display-advertising-technology-landscape/) by providing media planning and creative agencies a platform that connects them to site and publisher inventory specifications.
 
-# TODO: The following needs to be updated as some items are likely not going to apply since the app was split into a frontend and a backend.
+
+## Used components and development tools
+The Spec backend application uses following 3rd party libraries to make all this magic happen. To see all of the components used, check the `package.json` file in the root directory.
+
+### Components 
+
+* sails-postgresql (https://github.com/balderdashy/sails-postgresql)
+* sails-generate-auth (https://www.npmjs.org/package/sails-generate-auth)
+* PassportJS (http://passportjs.org/)
+
+### Development Tools
+* GulpJS (http://www.gulpjs.com)
+* SailsJS (http://sailsjs.org) - `npm install -g sails`
+* Karma (https://github.com/karma-runner/karma) - Unit test runner
+* Protractor (http://angular.github.io/protractor) - End to end (E2E) test runner
+* PhantomJS (http://phantomjs.org) - Headless WebKit scriptable with a JavaScript API
+* Homebrew (http://brew.sh)
+* Git (http://git-scm.com)
+* Heroku Toolbelt](https://toolbelt.heroku.com/)
+* NPM (http://nodejs.org)
+
+Note that this list may change at any time and may not be complete.
+
 
 # Getting started
 
@@ -24,19 +46,6 @@ Note: In order to get around some Heroku issue. We ended up renaming app.js to .
 # On-boarding
 
 New to all of this? Maybe the following will help. You don't need to follow all of these steps in order to update the app, this is just basically how the app was spawned/born.
-
-App Dependencies: 
-- [Homebrew](http://brew.sh)
-- [SailsJS](http://sailsjs.org)
-- [Git](http://git-scm.com)
-- [Heroku Toolbelt](https://toolbelt.heroku.com/)
-- [NPM](http://nodejs.org)
-
-Code Development Dependencies:
-- [SailsJS](http://sailsjs.org) - `npm install -g sails`
-- [Bower Components](http://bower.io) - `npm install -g bower`
-- [Forever](https://github.com/nodejitsu/forever) - `npm install -g forever`
-- [GruntJS](http://gruntjs.com) - `npm install -g grunt` (This is not absolutely necessary. It's just good to have globally.)
 
 1. Generate a new app `sails new my-app` and `cd my-app` into the folder generated.
 2. Follow the post [Sails.js, sick of restarting your server?](https://coderwall.com/p/njcr7w) to keep Sails running so that you don't have to keep lifting the sails.
@@ -97,7 +106,7 @@ connections: {
 
 ## Frontend
 
-Information about the apps frontend can be found in [`assets/README.md`](assets/README.md).
+Information about the apps frontend can be found in [spec.global.frontend/README.md](https://github.com/robksawyer/spec.global.frontend/blob/master/README.md).
 
 
 ## Backend
@@ -109,6 +118,61 @@ Spec is built on the [SailsJS](http://sailsjs.org) framework. Data storage is pr
 - [Mocha](http://visionmedia.github.io/mocha/) - Mocha is a feature-rich JavaScript test framework running on node.js and the browser, making asynchronous testing simple and fun.
 - [PhantomJS](http://phantomjs.org) - Headless browser testing.
 
+
+## Development
+
+For development and task management, we're using [Gulp](http://www.gulpjs.com) and the Node Package Manager (NPM). In order to install dependencies you must run `npm install` in the app directoy. If you don't have npm, that means you don't have NodeJS installed. Check out [Homebrew](http://brew.sh) – it'll help you get the programs you need quickly.
+
+```bash
+gulp serve
+```
+
+Then head to `http://localhost:3001` in your browser.
+
+The `serve` tasks starts a static file server, which serves the AngularJS application, and a watch task which watches
+all files for changes and lints, builds and injects them into the index.html accordingly.
+
+## Tests
+
+To run tests run:
+
+```bash
+gulp test
+```
+
+**Or** first inject all test files into `karma.conf.js` with:
+
+```bash
+gulp karma-conf
+```
+
+Then you're able to run Karma directly. Example:
+
+```bash
+karma start --single-run
+```
+
+## Production ready build - a.k.a. dist
+
+To make the app ready for deploy to production run:
+
+```bash
+gulp dist
+```
+
+Now there's a `./dist` folder with all scripts and stylesheets concatenated and minified, also third party libraries
+installed with bower will be concatenated and minified into `vendors.min.js` and `vendors.min.css` respectively.
+
+To run your deployment code run:
+
+```bash
+gulp production
+```
+
+Then head to `http://localhost:3000` in your browser.
+
+# Testing
+
 ## Running Unit Tests
 
 The backend of the app is currently set up to use Protractor for e2e (End to End) and Mocha for unit testing. And to make it a bit more confusing, we're using Protractor, Karma and Jasmine for the frontend testing (See [`assets/README.md`](assets/README.md). If you're curious to learn more about testing with Mocha in Sails, check out the post [Unit Testing Sails.js Applications With Mocha](http://www.tysoncadenhead.com/blog/unit-testing-sails-js-applications-with-mocha#.VEJS3L5fhhw). You should also see this [Stackoverflow post](http://stackoverflow.com/a/26439686/67524) as well.
@@ -119,29 +183,15 @@ But as mentioned, the app has already been configured. All you need to do is run
 
 *Note: This should run all of the frontend Karma Jasmine unit tests and the Mocha unit tests for the backend. For end to end (e2e) tests, we're using Protractor. You'll need to run this via another command. Read more about e2e tests at [`assets/README.md`](assets/README.md).*
 
-# Development
-
-For development and task managment, we're using the standard package of [Grunt](http://gruntjs.org) which is included with SailsJS (You don't need to do anything regarding the Grunt.js file. It's already set up by Sails.) and the Node Package Manager (NPM). In order to install dependencies you must run `npm install` in the app directoy. If you don't have npm, that means you don't have node installed. Check out [Homebrew](http://brew.sh) – it'll help you get the programs you need quickly.
-
-In order to not have to keep launching the app, we're using a handy CLI tool known as [Forever](https://github.com/nodejitsu/forever). There's a good post named [Sails.js, sick of restarting your server ?](https://coderwall.com/p/njcr7w) that'll get you up and running.
-
-Once you get it all installed, run the following:
-
-`forever -w start app.js # -w to watch for file changes!`
-
-To stop it, run:
-
-`forever stop app.js`
-
 ---
 
 # The App
-The current app is running at <http://specsio.herokuapp.com>.
+The current app is running at <http://spec-global-backend.herokuapp.com>.
 
 # Staging 
 
 Coming soon...
-~~The current staging site is located at <http://specio-stage.herokuapp.com>.~~
+~~The current staging site is located at <http://spec-global-backend-stage.herokuapp.com>.~~
 
 
 # Deployment 
