@@ -2,6 +2,10 @@
 
 > Spec (http://spec.global) is filling a niche in the [display advertising technology landscape](http://prezi.com/katuvp2rkyk_/the-display-advertising-technology-landscape/) by providing media planning and creative agencies a platform that connects them to site and publisher inventory specifications.
 
+# Before you dive in
+
+In order to get a better understanding of how Sails config variables are passed around. Check out this [StackOverflow post](https://stackoverflow.com/questions/18267706/create-config-variables-in-sails-js). You should also check out the document [ONBOARDING.md](ONBOARDING.md) as it has on-boarding information.
+
 ## Used components and development tools
 The Spec backend application uses following 3rd party libraries to make all this magic happen. To see all of the components used, check the `package.json` file in the root directory.
 
@@ -34,9 +38,13 @@ If you just want to see the app in action run the following:
 3. Navigate to `http://localhost:1337` in your browser.
 4. Start up [spec.global.frontend](https://github.com/robksawyer/spec.global.frontend).
 
-# Before you dive in
 
-In order to get a better understanding of how Sails config variables are passed around. Check out this [StackOverflow post](https://stackoverflow.com/questions/18267706/create-config-variables-in-sails-js). You should also check out the document [ONBOARDING.md](ONBOARDING.md) as it has on-boarding information.
+## Installation
+First of all you have to install `npm` to your box. Also you need `node.js` installed to your box. Or, if you're serving the app via Heroku, just make sure that you have it installed locally. See [ONBOARDING.md](ONBOARDING.md) for more.
+<pre>
+npm install slush -g
+npm install sails -g
+</pre>
 
 ---
 
@@ -133,7 +141,7 @@ There are a couple of things to note about deployment. First, check the `package
 ```
 ...
 "scripts": {
-    "start": "sails lift --prod",
+    "start": "gulp production",
     "debug": "node debug app.js"
  },
  ...
