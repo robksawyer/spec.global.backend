@@ -121,8 +121,8 @@ There are a couple of things to note about deployment. First, check the `package
 ```
 ...
 "scripts": {
-    "start": "gulp production",
-    "debug": "node debug app.js"
+    "start": "sails lift",
+    "debug": "sails lift --debug"
  },
  ...
  ```
