@@ -16,25 +16,23 @@ The Spec backend application uses following 3rd party libraries to make all this
 * PassportJS (http://passportjs.org/)
 
 ### Development Tools
-* GulpJS (http://www.gulpjs.com)
-* SailsJS (http://sailsjs.org) - `npm install -g sails`
-* Karma (https://github.com/karma-runner/karma) - Unit test runner
-* Protractor (http://angular.github.io/protractor) - End to end (E2E) test runner
-* PhantomJS (http://phantomjs.org) - Headless WebKit scriptable with a JavaScript API
+* SailsJS - MVC Framework for NodeJS (http://sailsjs.org)
+* Mocha - Javascript test framework for node.js & the browser (https://github.com/mochajs/mocha)
+* Protractor - End to end (E2E) test runner (http://angular.github.io/protractor)
+* PhantomJS  - Headless WebKit scriptable with a JavaScript API (http://phantomjs.org)
 * Homebrew (http://brew.sh)
-* Git (http://git-scm.com)
-* Heroku Toolbelt](https://toolbelt.heroku.com/)
-* NPM (http://nodejs.org)
+* Git - Version control (http://git-scm.com)
+* Heroku Toolbelt (https://toolbelt.heroku.com/)
+* NodeJS - Server backend technology (http://nodejs.org)
 
 Note that this list may change at any time and may not be complete.
-
 
 # Run the app
 
 If you just want to see the app in action run the following:
 
 1. `npm install`
-2. `gulp production`
+2. `sails lift`
 3. Navigate to `http://localhost:1337` in your browser.
 4. Start up [spec.global.frontend](https://github.com/robksawyer/spec.global.frontend).
 
@@ -42,7 +40,7 @@ If you just want to see the app in action run the following:
 ## Installation
 First of all you have to install `npm` to your box. Also you need `node.js` installed to your box. Or, if you're serving the app via Heroku, just make sure that you have it installed locally. See [ONBOARDING.md](ONBOARDING.md) for more.
 <pre>
-npm install slush -g
+npm install slush -g (TODO: Figure out if this is actually needed.)
 npm install sails -g
 </pre>
 
@@ -67,35 +65,17 @@ Spec is built on the [SailsJS](http://sailsjs.org) framework. Data storage is pr
 
 ## Development
 
-For development and task management, we're using [Gulp](http://www.gulpjs.com) and the Node Package Manager (NPM). In order to install dependencies you must run `npm install` in the app directoy. If you don't have npm, that means you don't have NodeJS installed. Check out [Homebrew](http://brew.sh) – it'll help you get the programs you need quickly.
+For development and task management, we're using [Gulp](http://www.gulpjs.com) and the Node Package Manager (NPM). In order to install dependencies you must run `npm install` in the app directoy. If you don't have npm, that means you don't have NodeJS installed (Refer to the top of this README). Check out [Homebrew](http://brew.sh) – it'll help you get the programs you need quickly.
 
-```bash
-gulp serve
-```
+### Starting the backend
 
-Then head to `http://localhost:3001` in your browser.
+In order to get the backend running, all you need to run is:
 
-The `serve` tasks starts a static file server, which serves the AngularJS application, and a watch task which watches
-all files for changes and lints, builds and injects them into the index.html accordingly.
+`sails lift`
 
-## Production ready build - a.k.a. dist
+### Starting the frontend
 
-To make the app ready for deploy to production run:
-
-```bash
-gulp dist
-```
-
-Now there's a `./dist` folder with all scripts and stylesheets concatenated and minified, also third party libraries
-installed with bower will be concatenated and minified into `vendors.min.js` and `vendors.min.css` respectively.
-
-To run your deployment code run:
-
-```bash
-gulp production
-```
-
-Then head to `http://localhost:3000` in your browser.
+After you've started the backend, you'll need to get the frontend running. You can see how to do this at [spec.global.frontend/README.md](https://github.com/robksawyer/spec.global.frontend/blob/master/README.md).
 
 # Testing
 
