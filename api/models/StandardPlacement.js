@@ -45,10 +45,6 @@ module.exports = {
  	  location_on_page: {
    		type: 'string'
    	},
-   	publishers: {
-  		collection: 'Publisher',
-  		via: 'standard_inventory'
-  	},
   	labeling_requirements: {
   		type: 'string'
   	},
@@ -63,7 +59,17 @@ module.exports = {
   	},
   	more_information_url: {
   		type: 'string'
-  	}
+  	},
+
+    //
+    // Below is all specification for relations to another models
+    //  
+    // Publisher of the Standard Media placement
+    publisher: {
+      collection: 'publisher',
+      via: 'standardinventory'
+    },
+
   },
 
   validation_messages: {

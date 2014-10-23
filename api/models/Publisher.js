@@ -19,11 +19,18 @@ module.exports = {
   		collection: 'Contact',
   		via: 'employer'
   	},
-  	standard_inventory: {
-  		model: 'StandardPlacement'
+
+    // 
+    // Below is all specification for relations to another models
+    // 
+    // Standard Media inventory of the publisher
+  	standardplacement: {
+  		model: 'standardplacement'
   	},
-  	rich_inventory: {
-  		model: 'RichPlacement'
+
+    // Rich Media inventory of the publisher
+  	richplacement: {
+  		model: 'richplacement'
   	}
   },
 

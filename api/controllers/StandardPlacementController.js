@@ -1,3 +1,4 @@
+'use strict';
 /**
  * InventoryController
  *
@@ -12,16 +13,16 @@ module.exports = {
 	* Handles showing the new placement form.
 	*
 	**/
-	'new': function(req, res) {
+	/*'new': function(req, res) {
 		res.view();
-	},
+	},*/
 
 	/**
 	*
 	* Handles viewing placmeents
 	*
 	**/
-	show: function(req, res, next){
+	/*show: function(req, res, next){
 		StandardPlacement.findOne( { id: req.params['id'] })
 		.exec(function ( error, placement){
 			if(error) return next(error);
@@ -31,7 +32,7 @@ module.exports = {
 				placement: placement
 			});
 		});
-	}
+	}*/
 
 };	
 
