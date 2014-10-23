@@ -1,8 +1,8 @@
 {
-  "name": "backend-server",
+  "name": "spec-global-backend",
   "private": true,
-  "version": "0.0.0",
-  "description": "Backend server for angular-sailsjs-boilerplate a Sails application that serves just a JSON API for frontend application",
+  "version": "0.0.1",
+  "description": "Backend server for Spec that is a Sails application serving just a JSON API for frontend application",
   "keywords": [
     "sails.js",
     "backend",
@@ -16,6 +16,7 @@
     "async": "0.9.0",
     "barrels": "1.1.1",
     "bcryptjs": "2.1.0",
+    "gulp": "^3.8.9",
     "include-all": "0.1.6",
     "jsonwebtoken": "1.1.2",
     "lodash": "2.4.1",
@@ -51,11 +52,11 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tarlepp/angular-sailsjs-boilerplate.git"
+    "url": "git://github.com/robksawyer/spec.global.backend.git"
   },
   "bugs": {
-    "url": "https://github.com/tarlepp/angular-sailsjs-boilerplate/issues"
+    "url": "https://github.com/robksawyer/spec.global.backend/issues"
   },
-  "author": "Tarmo Leppänen",
+  "author": "Rob Sawyer",
   "license": "MIT"
 }
