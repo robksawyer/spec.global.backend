@@ -11,6 +11,9 @@ module.exports = {
   	name: {
   		type: 'string',
   	},
+    description: {
+      type: 'text',
+    },
   	width: {
   		type: 'integer',
   		required: true
@@ -19,6 +22,9 @@ module.exports = {
   		type: 'integer',
   		required: true
   	},
+    iab_rising_star: {
+      type: 'boolean'
+    },
   	file_type: {
   		type: 'string'
   	},
@@ -107,7 +113,7 @@ module.exports = {
     // Publisher of the Rich Media placement
     publisher: {
       collection: 'publisher',
-      via: 'richinventory'
+      via: 'rich_inventory'
     },
   },
 

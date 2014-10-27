@@ -12,11 +12,14 @@ module.exports = {
   		type: 'string',
   		required: true
   	},
+    description: {
+      type: 'text',
+    },
   	url: {
   		type: 'string'
   	},
   	contacts: {
-  		collection: 'Contact',
+  		collection: 'contact',
   		via: 'employer'
   	},
 
@@ -24,13 +27,13 @@ module.exports = {
     // Below is all specification for relations to another models
     // 
     // Standard Media inventory of the publisher
-  	standardplacement: {
-  		model: 'standardplacement'
+  	standard_inventory: {
+  		model: 'StandardPlacement'
   	},
 
     // Rich Media inventory of the publisher
-  	richplacement: {
-  		model: 'richplacement'
+  	rich_inventory: {
+  		model: 'RichPlacement'
   	}
   },
 

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "New York Times",
+        "description": "Songs for the Philologists is a collection of poems by E. V. Gordon and J. R. R. Tolkien as well as traditional songs. It is the rarest and most difficult to find Tolkien-related book. Originally a collection of typescripts compiled by Gordon in 1921–26 for the students of the University of Leeds, it was given by A. H. Smith of University College London, a former student at Leeds, to a group of students to be printed privately in 1935 or 1936, and printed in 1936 with the impressuum 'Printed by G. Tillotson, A. H. Smith, B. Pattison and other members of the English Department, University College, London.'",
+        "url": "http://nytimes.com",
+        "contacts": 1,
+        "standard_inventory": [1],
+        "rich_inventory": []
+    },
+    {
+        "name": "College Humor",
+        "description": "Songs for the Philologists is a collection of poems by E. V. Gordon and J. R. R. Tolkien as well as traditional songs. It is the rarest and most difficult to find Tolkien-related book. Originally a collection of typescripts compiled by Gordon in 1921–26 for the students of the University of Leeds, it was given by A. H. Smith of University College London, a former student at Leeds, to a group of students to be printed privately in 1935 or 1936, and printed in 1936 with the impressuum 'Printed by G. Tillotson, A. H. Smith, B. Pattison and other members of the English Department, University College, London.'",
+        "url": "http://www.college-humor.com",
+        "contacts": 2,
+        "standard_inventory": [],
+        "rich_inventory": [2]
+    },
+    {
+        "name": "CBS",
+        "description": "Songs for the Philologists is a collection of poems by E. V. Gordon and J. R. R. Tolkien as well as traditional songs. It is the rarest and most difficult to find Tolkien-related book. Originally a collection of typescripts compiled by Gordon in 1921–26 for the students of the University of Leeds, it was given by A. H. Smith of University College London, a former student at Leeds, to a group of students to be printed privately in 1935 or 1936, and printed in 1936 with the impressuum 'Printed by G. Tillotson, A. H. Smith, B. Pattison and other members of the English Department, University College, London.'",
+        "url": "http://www.cbsinteractive.com",
+        "contacts": 3,
+        "standard_inventory": [1],
+        "rich_inventory": [2]
+    }
+]

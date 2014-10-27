@@ -13,6 +13,12 @@ module.exports = {
       minLength: 2,
       required: true
   	},
+    description: {
+      type: 'text',
+    },
+    iab_spec_accepted: {
+      type: 'boolean'
+    },
   	width: {
   		type: 'integer',
   		required: true
@@ -67,7 +73,7 @@ module.exports = {
     // Publisher of the Standard Media placement
     publisher: {
       collection: 'publisher',
-      via: 'standardinventory'
+      via: 'standard_inventory'
     },
 
   },

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "J. R. R. Tolkien",
+        "email": "something@something.com",
+        "phone": "503-222-1111",
+        "employer": 1
+    },
+    {
+        "name": "Leo Tolstoy",
+        "email": "something5@hotbot.com",
+        "phone": "503-323-8676",
+        "employer": 3
+    },
+    {
+        "name": "William Gibson",
+        "email": "something3@yahoo.com",
+        "phone": "239-344-4443",
+        "employer": 2
+    },
+    {
+        "name": "Herbert George “H.G.” Wells",
+        "email": "something2@hotmail.com",
+        "phone": "323-874-1111",
+        "employer": 3
+    },
+    {
+        "name": "Jules Verne",
+        "email": "something10@gmail.com",
+        "phone": "394-422-8739",
+        "employer": 1
+    }
+]

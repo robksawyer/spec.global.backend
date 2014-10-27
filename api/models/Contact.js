@@ -25,8 +25,8 @@ module.exports = {
     // Below is all specification for relations to another models
     // 
     // Contacts of the Publisher
-  	publisher: {
-  		model: 'publisher'
+  	employer: {
+  		model: 'Publisher'
   	}
   },
 

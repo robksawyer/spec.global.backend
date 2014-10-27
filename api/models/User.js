@@ -39,10 +39,10 @@ module.exports = {
             via: 'user'
         },
         // Message objects that user has sent
-        messages: {
+        /*messages: {
             collection: 'message',
             via: 'user'
-        },
+        },*/
         // Login objects that are attached to user
         logins: {
             collection: 'UserLogin',
