@@ -14,7 +14,7 @@
   ],
   "dependencies": {
     "async": "0.9.0",
-    "barrels": "1.1.1",
+    "barrels": "^1.1.1",
     "bcryptjs": "2.1.0",
     "include-all": "0.1.6",
     "jsonwebtoken": "1.1.2",
@@ -27,9 +27,11 @@
     "passport-local": "1.0.0",
     "passport-twitter": "1.0.2",
     "rc": "0.5.1",
-    "sails": "0.10.5",
+    "rsvp": "^3.0.18",
+    "sails": "^0.10.5",
     "sails-disk": "0.10.4",
-    "sails-postgresql": "^0.10.9",
+    "sails-hook-autoreload": "^0.11.5",
+    "sails-postgresql": "^0.10.15",
     "ua-parser": "0.3.3",
     "validator": "3.19.0"
   },
